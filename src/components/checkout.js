@@ -7,7 +7,7 @@ import { useStateValue } from '../StateProvider';
 function Checkout (){
     //eslint-disable-next-line
     const [{carts}, dispatch ] = useStateValue()
-    console.log(carts)
+    
     return (
         <div className="checkout">
             <div className="checkout_left">

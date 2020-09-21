@@ -2,14 +2,21 @@ import React, { useEffect } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import $ from 'jquery';
+import { useStateValue } from './StateProvider'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { auth } from './firebase';
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
 import Header from './components/homeBody';
 import Login from './components/Login';
 import ForgotPassword from './components/forgotPassword';
 import Register from './components/register';
-import {BrowserRouter as Router, Route, Switch, useHistory} from 'react-router-dom'
+import Payment from './components/payment';
 import Checkout from './components/checkout';
-import { useStateValue } from './StateProvider'
-import { auth } from './firebase';
+import Orders from './components/orders';
+
+const Apikey = loadStripe('pk_test_51HST2ACrAbXD0UyyFNxTJo8TDLxDJiGuMiuWsaDPVvH0ifiU484BOFuI1AvHGXPOwjzYwAa7FPYcaoQEbisGAKme00NchWU52p');
+
 
 function App () {
   //eslint-disable-next-line
@@ -95,7 +102,15 @@ function App () {
           <Route path='/register'>
             <Register/>
           </Route>
-      
+          <Route path='/payment'>
+            <Elements stripe={Apikey}>
+            <Payment/>
+            </Elements>
+          </Route>
+          <Route path="/orders">
+            <Orders/>
+          </Route>
+ 
       </Switch>
         </div>
         

@@ -1,0 +1,56 @@
+.payment-section {
+  margin: 0 20px;
+}
+.payment-title {
+  text-align: center;
+  padding: 10px;
+  font-weight: 400;
+  
+}
+.flex-payment {
+  display: flex;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 20px;
+  
+}
+.payment-detail > p {
+
+margin-left: 20px;
+margin-top: 20px;
+}
+.payment-detail > p {
+border-bottom: 2px solid lightgrey;
+}
+h3 {
+  margin-left: 15px;
+}
+.payment-details {
+  flex: 70%;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.payment-order {
+  flex:30%;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.payment-detail {
+  flex-direction: row;
+}
+.payment-method {
+  margin-top: 20px;  
+}
+img {
+    object-fit: contain;
+    width : 150px;
+    height: 150px;
+}
+.info {
+    display: flex;
+}
+.card {
+    margin: 20px;
+}

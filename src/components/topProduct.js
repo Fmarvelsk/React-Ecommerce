@@ -7,7 +7,7 @@ function ProductInfo () {
        
 	<div className="carousel__container js-carousel-container">
 		<div className="carousel__list js-carousel-list">
-			<div className="carousel__item js-carousel-item"> <img src="" alt="" width="100%"/></div>
+			<div className="carousel__item js-carousel-item"> <img className ="carousel-img" src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/35/875405/1.jpg?0699" alt=""/></div>
 			<div className="carousel__item js-carousel-item">2</div>
 			<div className="carousel__item js-carousel-item">3</div>
 			<div className="carousel__item js-carousel-item">4</div>

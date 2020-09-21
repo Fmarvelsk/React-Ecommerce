@@ -9,20 +9,19 @@ import { auth } from '../firebase';
 function Navbar (){
     // eslint-disable-next-line
     const [{ carts, user }, dispatch] = useStateValue();
-    console.log(carts)
     const handleAuth = () => {
         if(user)
         auth.signOut()
     }
     return (
     <div className='navbar'>
-        <Link to={!user && './login'}><img className="navbar_logo" alt="logo" src="./ecommerce-logo.jpg"/></Link>
+        <Link to='/'><img className="navbar_logo" alt="logo" src="./ecommerce-logo.jpg"/></Link>
         <div className="search_form">
             <input type="text" className="search-input" placeholder = "Search" />
             <SearchIcon className="search_color"/>
         </div>
         <div className="nav_option">
-        <Link to="/login">
+        <Link to={!user && "/login"}>
     <div className="option" onClick={handleAuth}>
     <span className="option_1">{user ? `${user?.email}` : `Hello Guest`}</span>
     <span className="option_2">{user ? 'Logout' : 'SignIn'}</span>

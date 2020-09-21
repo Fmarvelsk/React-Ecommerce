@@ -1,24 +1,9 @@
-import React from 'react';
-
-const Imagesider = () => {
-
-    return (
-        <div className="slider">
-            <div className="r">
-                <p>Supermaket</p>
-                <p>Supermaket</p>
-                <p>Supermaket</p>
-                <p>Supermaket</p>
-                <p>Supermaket</p>
-                <p>Supermaket</p>
-                </div>
-                        <div className="image_slider">
-               <img alt="" src=""/>
-            </div>
-            <div className="payment">
-            <p>payment</p>
-            </div>
-        </div>
-    )
+function a () {
+   number = 5
 }
-export default Imagesider;
+function b () {
+    console.log(number)
+}
+a()
+b()
+console.log(number)

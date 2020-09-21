@@ -15,11 +15,21 @@ const reducer =(state, action) => {
                 ...state,
                 carts : [...state.carts, action.item]
             }
+            
+            case "Empty carts" :
+                return {
+                    ...state,
+                    carts:[]
+                }
+
             case 'Remove from carts':
+                
             const cartsIndex = state.carts.findIndex( (items => items.id === action.id ))
             const newCarts = [...state.carts]
-            if(cartsIndex > 0){
-                newCarts.slice(cartsIndex, 1)
+            if(cartsIndex >= 0){
+                
+                newCarts.splice(cartsIndex, 1)
+
             }
             else {
                 console.log('Error')
@@ -28,6 +38,7 @@ const reducer =(state, action) => {
                 ...state,
                    carts : newCarts
             }
+
             case 'Set user':
                 return {
                     ...state,

@@ -213,11 +213,13 @@ a{
     justify-content: flex-end;
     margin: 10px 0 10px 10px;
     width: 90%;
-    max-height: 400px;
+    max-height: 500px;
     min-width: 100px;
     background-color: #fff;
     z-index :1;
-    border-radius : 10px
+    border-radius : 10px;
+    word-wrap: break-word;
+   
 
 }
 .product_items > img {
@@ -259,4 +261,7 @@ a{
     margin-left: 5px;
     margin-right: 5px;
 
+}
+.carousel-img {
+    width: 100%;
 }

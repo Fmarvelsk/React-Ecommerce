@@ -35,7 +35,7 @@ const Signin = (e) => {
                     value={email}
                     name="email"
                     onChange ={ (e) => setUser(e.target.value)}
-                    /> 
+                    />
                     <input type="password" placeholder="password"
                     value={password}
                     name="password"

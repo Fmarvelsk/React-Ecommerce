@@ -2,10 +2,15 @@ import React from 'react';
 import Currency from 'react-currency-format'
 import { useStateValue } from '../StateProvider';
 import { getCarts } from '../reducer'
+import { useHistory } from 'react-router-dom';
 
 function SubTotal(){
     //eslint-disable-next-line
     const [{carts}, dispatch] = useStateValue()
+    const history = useHistory()
+    const paymentClick = (e) => {
+        e.preventDefault();
+        history.push('/payment')}
     
     return(
         <div className="subtotal">
@@ -17,6 +22,8 @@ function SubTotal(){
                 <small className="subtotal_gift">
                     <input type="checkbox" /> This order contains a gift
                 </small>
+                
+            
                 </>
             )} 
             decimalScale={2}
@@ -24,7 +31,7 @@ function SubTotal(){
             displayType={'text'}
             thousandSeparator={true}
             prefix={'$'}/>
-            <button>Proceed to checkout</button>
+            <button onClick={paymentClick}>Proceed to checkout</button>
         </div>
     )
 }
