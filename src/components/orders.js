@@ -1,37 +1,41 @@
-import React, { useEffect, useState } from 'react';
-import { db } from '../firebase';
-import { useStateValue } from '../StateProvider';
+import React, { useState, useEffect } from 'react';
+import { db } from "../firebase";
+import { useStateValue } from "../StateProvider";
+//import Order from './order'
 
 function Orders() {
-    const [ {carts, user }, dispatch ] = useStateValue();
-    const [orders, newOrders] = useState([])
+  const [{ carts, user }, dispatch] = useStateValue();
+  const [orders, newOrders] = useState([]);
 
-useEffect( () => {
-    let mounted = true;
-    if( mounted ) {
-    db.collection('users')
-    .doc(user?.uid)
-    .collection('orders')
-    .orderBy('created', 'desc')
-    .onSnapshot(snapshot => {(
-        newOrders(snapshot.docs.map(doc => ( {
-          id: doc.id,
-          data : doc.data()
-        }))
-        
-    ))
-})
-    }
-    else {
-        return newOrders([])
-    }
-    return () => mounted = false;
-}, [user])
-    return(
-        <div className='orders__order'>
-            {console.log(orders)}
+  useEffect(() => {
+      if(user){
+        db
+        .collection('users')
+        .doc(user?.uid)
+        .collection('orders')
+        .orderBy('created', 'desc')
+        .onSnapshot(snapshot => (
+            newOrders(snapshot.docs.map(doc => ({
+                id: doc.id,
+                data: doc.data()
+            })))
+        ))}
+        else {
+            newOrders([])
+        }
+        console.log(user?.uid)
+
+  }, [user])
+
+    return (
+        <div className='orders'>
+            <h1>Your Orders</h1>
+
+            <div className='orders__order'>
+               {orders}
             </div>
+        </div>
     )
 }
 
-export default Orders;
+export default Orders
