@@ -5,6 +5,7 @@ import HelpIcon from '@material-ui/icons/Help';
 import {Link} from 'react-router-dom';
 import { useStateValue } from '../StateProvider';
 import { auth } from '../firebase';
+import logo from './shop-logo.jpg'
 
 function Navbar (){
     // eslint-disable-next-line
@@ -26,11 +27,11 @@ function Navbar (){
     <span className="option_1">{user ? `${user?.email}` : `Hello Guest`}</span>
     <span className="option_2">{user ? 'Logout' : 'SignIn'}</span>
         </div></Link>
-
-    <div className="option">
+<Link to="/orders">
+    <div className="option" >
         <span className="option_1">Returns</span>
         <span className="option_2">& Orders</span>
-    </div>
+    </div></Link>
     <div className="option_carts">
         <span className='option_help'>Help</span>
         <span><HelpIcon/></span>

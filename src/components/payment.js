@@ -48,7 +48,6 @@ function Payment (){
             .collection('orders')
             .doc(paymentIntent.id)
             .set({
-                payment_id : paymentIntent.id,
                 carts : carts,
                 amount : paymentIntent.amount,
                 created_At : paymentIntent.created
@@ -99,9 +98,9 @@ function Payment (){
                 <div className="total-payment">
                 <Currency renderText={(value) => (
                 <>
-                <p>
+                <h4>
             Total Amount : <strong>{value}</strong>
-                </p>
+                </h4>
                 </>
             )} 
             decimalScale={2}
@@ -110,7 +109,6 @@ function Payment (){
             thousandSeparator={true}
             prefix={'$'}/>
             
-               
                 <button disabled={processing || disabled || succeed }>Submit</button>
 
                 <span>
