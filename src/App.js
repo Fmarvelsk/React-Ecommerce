@@ -76,7 +76,7 @@ function App () {
         
         $carouselButton.on("click", slide);
       })
-      
+     //eslint-disable-next-line 
     }, []) 
     
    

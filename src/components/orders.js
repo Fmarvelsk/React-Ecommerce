@@ -6,6 +6,7 @@ import Order from './order';
 
 
 function Orders() {
+    //eslint-disable-next-line
   const [{ carts, user }, dispatch] = useStateValue();
   const [orders, newOrders] = useState([]);
 
@@ -16,7 +17,6 @@ function Orders() {
         .doc(user?.uid)
         .collection("orders")
         .onSnapshot(snapshot =>(
-            console.log(snapshot),
                 newOrders(snapshot.docs.map(doc => ({
                 id: doc.id,
                 data: doc.data()
@@ -24,7 +24,7 @@ function Orders() {
         ))}
 
         else {
-            newOrders([1, 2])
+            newOrders([])
         }
         
         console.log(user?.uid)

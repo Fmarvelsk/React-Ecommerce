@@ -1,5 +1,5 @@
 import React from 'react';
-import moment from 'moment';
+//import moment from 'moment';
 import Currency from 'react-currency-format';
 
 function Order({ props }) {

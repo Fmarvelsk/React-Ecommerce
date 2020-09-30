@@ -24,10 +24,10 @@ body {
 
 }
 .navbar_logo {
-    width : 100px;
+    width : 47px;
     object-fit: contain;
     margin : 0 8px;
-    margin-top: 12px;
+    margin-top: 6px;
 }
 .control {
     height: 96%; 

@@ -5,7 +5,7 @@ import HelpIcon from '@material-ui/icons/Help';
 import {Link} from 'react-router-dom';
 import { useStateValue } from '../StateProvider';
 import { auth } from '../firebase';
-import logo from './shop-logo.jpg'
+import logo from '../image/ecommerce-logo.jpg';
 
 function Navbar (){
     // eslint-disable-next-line
@@ -16,11 +16,12 @@ function Navbar (){
     }
     return (
     <div className='navbar'>
-        <Link to='/'><img className="navbar_logo" alt="logo" src="./ecommerce-logo.jpg"/></Link>
+        <Link to='/'><img className="navbar_logo" alt="logo" src={logo}/></Link>
         <div className="search_form">
             <input type="text" className="search-input" placeholder = "Search" />
             <SearchIcon className="search_color"/>
         </div>
+        {console.log(logo)}
         <div className="nav_option">
         <Link to={!user && "/login"}>
     <div className="option" onClick={handleAuth}>

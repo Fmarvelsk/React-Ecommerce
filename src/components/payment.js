@@ -36,6 +36,7 @@ function Payment (){
        
         e.preventDefault();
         setProcessing(true); 
+     //eslint-disable-next-line 
         const payload = await stripe.confirmCardPayment(clientSession, {
             payment_method : {
                 card : element.getElement(CardElement)
@@ -130,7 +131,7 @@ function Payment (){
                     {carts.map((cart, index) => 
                         <div className="info" key={index}> 
                         
-                            <img src={cart.image} alt="image" />
+                            <img src={cart.image} alt="product" />
                         
                     <div className="product-details"> 
                     <p>{cart.title}</p>
