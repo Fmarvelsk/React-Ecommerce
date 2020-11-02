@@ -101,9 +101,32 @@ body {
     background-color: #fff;
     border-radius: 17px;
 }
+.rowads {
+    flex: 0 0 20vw;
+    margin-top: 5px;
+    margin-left : 35px;
+    margin-right : 35px; 
+    height: 400px;
+}
+.ad-color2{
+    background-color: #fff;
+    border-radius: 17px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    margin-top: 18px;
+    margin-bottom: 35px;
+}
+
 .row2 {
     flex : 60%;
     margin-top: 12px;
+}
+.carousel__button--prev {
+    left: 100% !important;
+}
+.carousel__button--prev, .carousel__button--next {
+    position: relative !important;
+    bottom: 125px !important;
 }
 .slider {
     align-items: center;

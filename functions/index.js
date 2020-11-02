@@ -20,8 +20,8 @@ app.post('/payments/create', (req, res, next) => {
     stripe.paymentIntents.create({
         amount : response,
         currency : "usd"
-    }).then( result => {
-        res.status(201).send({
+    }).then( (result) => {
+      return res.status(201).send({
             clientSession : result.client_secret
         })
         

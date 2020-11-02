@@ -30,11 +30,11 @@ function Payment (){
         }
         getclientSession()
            
-    }, [carts])
+    }, [carts])  
 
     const handlePayment = async (e) => {
        
-        e.preventDefault();
+        e.preventDefault(); 
         setProcessing(true); 
      //eslint-disable-next-line 
         const payload = await stripe.confirmCardPayment(clientSession, {
