@@ -25,11 +25,11 @@ function Product ({id, title, image, price, rating }) {
                 <p><small>$</small><strong>{price}</strong></p>
                 </div>
                 <div>            
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star"></span>
-    <span class="fa fa-star"></span>
+    <span className="fab fab-star checked"></span>
+    <span className="fab fab-star checked"></span>
+    <span className="fab fab-star checked"></span>
+    <span className="fab fab-star"></span>
+    <span className="fab fab-star"></span>
     </div>
                 <img src={image} alt="phones"></img>
             <button onClick={addToCarts}>Add to carts</button>

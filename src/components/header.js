@@ -45,7 +45,7 @@ const Header = ()=> {
             <img alt= "" className="control" src="https://ng.jumia.is/cms/Homepage/2020/W37/Mens-Fashion.jpg" />   
             </div>
             <div className="rowads">
-                <div class="ad-color2">
+                <div className="ad-color2">
             <p>Supermaket</p>
                 <p>Supermaket</p>
                 <p>Supermaket</p>

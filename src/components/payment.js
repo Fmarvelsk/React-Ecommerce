@@ -42,7 +42,7 @@ function Payment (){
                 card : element.getElement(CardElement)
             }
         }).then(({paymentIntent}) => {
-            console.log(paymentIntent)
+           
           db
             .collection('users')
             .doc(user?.uid)
@@ -58,7 +58,7 @@ function Payment (){
             setProcessing(false);
 
             dispatch({
-                type : "Remove carts",
+                type : "Empty carts",
             })
 
             history.replace('/orders')
@@ -88,7 +88,7 @@ function Payment (){
             <p>No of items: {carts?.length} </p>
             <p>Address :</p>
             
-            <div class="payment-method">
+            <div className="payment-method">
                 
             <h3>
                    2. Payment Method

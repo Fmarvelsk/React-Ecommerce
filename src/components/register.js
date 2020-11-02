@@ -12,7 +12,7 @@ function Register (){
         .then( (auth) => {
            if(auth){
                 history.push('/login')
-            console.log(auth)
+         
         }
         }).catch(err => alert(err.message))
 
@@ -38,7 +38,7 @@ function Register (){
                     onChange ={ (e) => setPassword(e.target.value)}
                      required />
                   
-                    <button class="login_button"> Register</button>
+                    <button className="login_button"> Register</button>
                 </form>
                 <Link to="/login" className="forgot_password"><p>Already have an account</p></Link>
                 

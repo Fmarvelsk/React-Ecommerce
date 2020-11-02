@@ -41,7 +41,7 @@ const Signin = (e) => {
                     name="password"
                     onChange ={ (e) => setPassword(e.target.value)}
                     />
-                    <button class="login_button"> Sign In</button>
+                    <button className="login_button"> Sign In</button>
                 </form>
                 <Link to="/forgotpassword" className="forgot_password"><p>Forgot password?</p></Link>
                 <p>

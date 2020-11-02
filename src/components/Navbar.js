@@ -21,9 +21,8 @@ function Navbar (){
             <input type="text" className="search-input" placeholder = "Search" />
             <SearchIcon className="search_color"/>
         </div>
-        {console.log(logo)}
         <div className="nav_option">
-        <Link to={!user && "/login"}>
+        <Link to={!user && '/login'}>
     <div className="option" onClick={handleAuth}>
     <span className="option_1">{user ? `${user?.email}` : `Hello Guest`}</span>
     <span className="option_2">{user ? 'Logout' : 'SignIn'}</span>

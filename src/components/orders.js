@@ -21,13 +21,14 @@ function Orders() {
                 id: doc.id,
                 data: doc.data()
             })))
-        ))}
+        ))
+    
+    }
 
         else {
             newOrders([])
         }
         
-        console.log(user?.uid)
 
   }, [user])
 
@@ -38,8 +39,8 @@ function Orders() {
             <h1>Your Orders</h1>
 
             <div className=''>
-                {orders?.map(order => (
-                    <Order props ={order}/>
+                {orders?.map((order, i) => (
+                    <Order key={i} props ={order}/>
                 ))}              
             </div>
         </div>

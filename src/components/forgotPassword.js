@@ -15,7 +15,7 @@ function ForgotPassword (){
                     type="text" 
                     placeholder="Enter Email Address"
                     required /> 
-                    <Link><button class="login_button">Send Mail</button></Link>
+                    <Link><button className="login_button">Send Mail</button></Link>
                 </form>
                 <Link to="/forgotpassword" className="forgot_password"><p>Forgot password?</p></Link> 
             </div>
